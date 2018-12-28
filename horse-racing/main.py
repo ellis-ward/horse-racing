@@ -1,5 +1,6 @@
 
 from horse import Horse
+import random
 
 money = 100
 
@@ -13,7 +14,7 @@ colours = [
 
 
 def race_horses(horses):
-    return horses[0]
+    return random.choice(horses)
 
 
 while money > 0:
