@@ -40,7 +40,8 @@ while money > 0:
         print("Your horse won the race!")
         winnings = round(which_howmuch + (which_howmuch * winner.odds),2) 
         money = round(money + winnings,2)
-        print(f"You win £{winnings}")
+        print(f"The odds were {horses[which_horse].odds}, and you bet £{which_howmuch:.2f}"
+        f", so you win £{winnings:.2f}")
 
     if horses[which_horse] != winner:
         print("Better luck next time, loser!")
