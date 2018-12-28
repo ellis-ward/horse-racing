@@ -33,6 +33,8 @@ while money > 0:
 
     os.system('clear')
 
+    print(f"You bet on {horses[which_horse].name}, the winner is {winner.name}")
+
     if horses[which_horse] == winner:
         print("You win!")
         winnings = round(which_howmuch * winner.odds,2) 
