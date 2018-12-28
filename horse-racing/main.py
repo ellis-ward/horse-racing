@@ -1,6 +1,7 @@
 
 from horse import Horse
 import random
+import os
 
 money = 100
 
@@ -29,6 +30,8 @@ while money > 0:
     money = round(money - which_howmuch, 2)
 
     winner = race_horses(horses)
+
+    os.system('clear')
 
     if horses[which_horse] == winner:
         print("You win!")
