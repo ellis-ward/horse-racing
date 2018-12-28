@@ -19,7 +19,7 @@ def race_horses(horses):
 
 
 while money > 0:
-    print(f"Welcome to the race! You have £{money}. Your horses are: ")
+    print(f"Welcome to the race! You have £{money:.2f}. Your horses are: ")
     horses = [Horse.random(colour) for colour in colours]
 
     for number, horse in enumerate(horses):
