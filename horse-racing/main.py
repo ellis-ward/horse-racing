@@ -26,6 +26,7 @@ while money > 0:
         print(f"{number} - {horse}")
     
     which_horse = int(input("What horse do you want to gamble on?"))
+    which_howmuch = float(input("How much do you want to throw away?"))
 
     money = round(money - which_howmuch, 2)
 
@@ -36,10 +37,12 @@ while money > 0:
     print(f"You bet on {horses[which_horse].name}, the winner is {winner.name}")
 
     if horses[which_horse] == winner:
-        print("You win!")
-        winnings = round(which_howmuch * winner.odds,2) 
-        money = money + winnings 
+        print("Your horse won the race!")
+        winnings = round(which_howmuch + (which_howmuch * winner.odds),2) 
+        money = round(money + winnings,2)
         print(f"You win £{winnings}")
 
     if horses[which_horse] != winner:
         print("Better luck next time, loser!")
+
+print (f"You have no money!")
