@@ -1,5 +1,6 @@
 import random
 import requests
+import colorful
 
 horse_names = requests.get(
     "https://horsenamegenerator.com/random"
@@ -25,6 +26,10 @@ class Horse:
         self.colour = colour
 
     def __str__(self):
+        color_func = getattr(colorful, self.colour)
+        return color_func("🏇").styled_string 
+
+    def info(self):
         return (f"{self.name} has a {self.colour} sash. "
                 f"They are a {self.posture} horse at {self.weight}kg. "
                 f"Odds are {self.odds}!")

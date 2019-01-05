@@ -10,7 +10,7 @@ colours = [
     "blue",
     "yellow",
     "pink",
-    "black",
+    "orange",
 ]
 
 
@@ -23,7 +23,7 @@ while money > 0:
     horses = [Horse.random(colour) for colour in colours]
 
     for number, horse in enumerate(horses):
-        print(f"{number} - {horse}")
+        print(f"{number} - {horse} - {horse.info()}")
     
     which_horse = int(input("What horse do you want to gamble on?"))
     which_howmuch = float(input("How much do you want to throw away?"))
